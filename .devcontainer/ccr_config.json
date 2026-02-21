@@ -1,0 +1,19 @@
+{
+  "LOG": false,
+  "Providers": [
+    {
+      "name": "DevBoost",
+      "api_base_url": "$LITELLM_BASE_URL/v1/chat/completions",
+      "api_key": "$LITELLM_API_KEY",
+      "models": [
+        "DevBoost/OpenAI/gpt-5.1",
+        "DevBoost/OpenAI/gpt-5.2"
+      ]
+    }
+  ],
+  "Router": {
+    "default": "DevBoost,DevBoost/OpenAI/gpt-5.2",
+    "think": "DevBoost,DevBoost/OpenAI/gpt-5.2",
+    "background": "DevBoost,DevBoost/OpenAI/gpt-5.1"
+  }
+}

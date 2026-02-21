@@ -1,0 +1,34 @@
+{
+  "name": "Devbox Remote Container",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".."
+  },
+  "runArgs": [
+    "--env-file",".devcontainer/devcontainer.env",
+    "--memory=6g",
+    "--cpus=3.0"
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/masterclass/.claude-code-router/config.json,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/.devcontainer/opencode_base_config.json,target=/home/masterclass/.config/opencode/opencode.json,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "jetbrains": {
+        "plugins": [
+          "ai.opencode.ide.jetbrains@1.0.9"
+        ]
+    },
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "sst-dev.opencode@0.0.13",
+        "mutantdino.resourcemonitor@1.0.7"
+      ]
+    }
+  },
+  "postCreateCommand": {
+    "backend_install": "cd backend && uv sync",
+    "frontend_install": "cd frontend && npm ci"
+  }
+}

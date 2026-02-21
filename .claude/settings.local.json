@@ -1,0 +1,12 @@
+{
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "permissions": {
+    "deny": [
+      "Read(./README_*)",
+      "Read(./TOOLS.md)"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}

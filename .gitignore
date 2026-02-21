@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+node_modules
+.venv
+.env
+*.env
+__pychache__
+**.pyc
+test-results
+playwright-report
+dist
+.kiro
+repomix-*
+.grepai/*.gob
+.grepai/*.gob.lock

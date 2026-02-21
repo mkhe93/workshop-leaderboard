@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: leaderboard
+Version: 0.1.0
+Author-email: Markus Höfling <markus.hoefling@devboost.com>
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: dotenv<0.10.0,>=0.9.9
+Requires-Dist: requests<3.0.0,>=2.32.5
+Requires-Dist: fastapi<0.122.0,>=0.121.0
+Requires-Dist: uvicorn<0.39.0,>=0.38.0
+Requires-Dist: pydantic<3.0.0,>=2.12.3
+Provides-Extra: dev
+Requires-Dist: pytest<9.0.0,>=8.4.2; extra == "dev"
+Requires-Dist: httpx<0.29.0,>=0.28.1; extra == "dev"
+Requires-Dist: ruff<0.16.0,>=0.15.0; extra == "dev"
+Requires-Dist: ty<0.1.0,>=0.0.16; extra == "dev"
