@@ -1,9 +1,6 @@
 {
   "name": "Devbox Remote Container",
-  "build": {
-    "dockerfile": "./Dockerfile",
-    "context": ".."
-  },
+  "image": "ghcr.io/mkhe93/workshop-leaderboard:latest",
   "runArgs": [
     "--env-file",".devcontainer/devcontainer.env",
     "--memory=6g",
