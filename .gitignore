@@ -14,4 +14,5 @@ repomix-*
 .grepai/*.gob
 .grepai/*.gob.lock
 **SOLUTION_*.py
+**/SOURCES.txt
 .vscode
