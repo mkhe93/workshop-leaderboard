@@ -1,6 +1,6 @@
 FROM node:22-bookworm-slim
 
-# Installing your devbox project
+##### Execute as root user from here
 WORKDIR /code
 USER root:root
 
@@ -12,9 +12,8 @@ RUN apt-get update && \
 
 # Install global npm packages
 RUN npm install -g @musistudio/claude-code-router@v2.0.0
-RUN npm install -g opencode-ai@1.1.53
 
-### Execute as non-root user from here
+##### Execute as non-root user from here
 RUN useradd -ms /bin/bash -u 1001 masterclass
 ENV CONTAINER_USER=1001
 RUN mkdir -p /code && chown ${CONTAINER_USER}:${CONTAINER_USER} /code
@@ -27,10 +26,13 @@ RUN curl -LsSf https://astral.sh/uv/0.10.4/install.sh | sh
 RUN uv python install 3.13
 
 RUN curl -fsSL https://claude.ai/install.sh | bash -s 2.1.47
+RUN claude plugin marketplace add lackeyjb/claude-conductor
+RUN claude plugin install --scope local conductor
+
 RUN echo 'eval "$(ccr activate)"' >> ~/.bashrc
 RUN echo 'alias ll="ls -lh"' >> ~/.bashrc
 RUN echo 'alias la="ls -alh"' >> ~/.bashrc
 RUN echo 'alias lisa="ls -lisah"' >> ~/.bashrc
 
 RUN mkdir -p ~/.claude-code-router
-RUN mkdir -p ~/.config/opencode
+
