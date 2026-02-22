@@ -2,13 +2,19 @@
   "name": "Devbox Remote Container",
   "image": "ghcr.io/mkhe93/workshop-leaderboard:latest",
   "runArgs": [
-    "--env-file",".devcontainer/devcontainer.env",
     "--memory=6g",
     "--cpus=3.0"
   ],
+  "containerEnv": {
+    "VITE_LEADERBOARD_FRONTEND_PORT": "9080",
+    "VITE_LEADERBOARD_BACKEND_PORT": "9180",
+    "VITE_BACKEND_URL": "http://localhost:9180",
+    "LITELLM_ADMIN_KEY": "sk-XXXXXXX",
+    "LITELLM_BASE_URL": "https://XXXXX",
+    "LITELLM_API_KEY": "sk-XXXXXXX"
+  },
   "mounts": [
-    "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/masterclass/.claude-code-router/config.json,type=bind,consistency=cached",
-    "source=${localWorkspaceFolder}/.devcontainer/opencode_base_config.json,target=/home/masterclass/.config/opencode/opencode.json,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/masterclass/.claude-code-router/config.json,type=bind,consistency=cached"
   ],
   "customizations": {
     "jetbrains": {
@@ -24,6 +30,7 @@
       ]
     }
   },
+  "forwardPorts": [9080],
   "postCreateCommand": {
     "backend_install": "cd backend && uv sync",
     "frontend_install": "cd frontend && npm ci"
