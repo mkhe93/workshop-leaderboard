@@ -3,7 +3,10 @@ name: Publish Devcontainer Image
 
 on:
   push:
-    branches: ["main"]   # runs on every commit to main (including merges)
+    branches:
+      - main
+    paths:
+      - "**/Dockerfile"
 
 permissions:
   contents: read
