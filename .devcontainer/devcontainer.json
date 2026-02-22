@@ -1,10 +1,9 @@
 {
   "name": "Devbox Remote Container",
   "image": "ghcr.io/mkhe93/workshop-leaderboard:latest",
-  "runArgs": [
-    "--memory=6g",
-    "--cpus=3.0"
-  ],
+  //
+  // Replace with provided containerEnv object during workshop
+  //
   "containerEnv": {
     "VITE_LEADERBOARD_FRONTEND_PORT": "9080",
     "VITE_LEADERBOARD_BACKEND_PORT": "9180",
@@ -13,6 +12,9 @@
     "LITELLM_BASE_URL": "https://XXXXX",
     "LITELLM_API_KEY": "sk-XXXXXXX"
   },
+  //
+  //
+  //
   "mounts": [
     "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/masterclass/.claude-code-router/config.json,type=bind,consistency=cached"
   ],
@@ -24,9 +26,21 @@
       ]
     }
   },
-  "forwardPorts": [9080],
-  "postCreateCommand": {
+  "hostRequirements": {
+    "cpus": 3,
+    "memory": "8gb"
+  },
+  "forwardPorts": [
+    9080
+  ],
+  "onCreateCommand": {
     "backend_install": "cd backend && uv sync",
-    "frontend_install": "cd frontend && npm ci"
+    "frontend_install": "cd frontend && npm ci",
+    "add_marketplace": "claude plugin marketplace add lackeyjb/claude-conductor"
+  },
+  // executed after onCreateCommand has finished
+  "postCreateCommand": {
+    "install_conductor": "claude plugin install --scope local conductor",
+    "restart_ccr": "ccr restart"
   }
 }
