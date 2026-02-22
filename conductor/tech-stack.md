@@ -1,30 +1,42 @@
 # Tech Stack
 
-## Overview
-This is a small monorepo with:
-- **Backend:** Python **FastAPI** service that queries LiteLLM Gateway analytics and aggregates them for the UI.
-- **Frontend:** **Vue 3** SPA built with **Vite**.
+This document captures the **current** technology choices in the codebase (brownfield documentation). It is descriptive, not a proposal to change technologies.
+
+## Architecture
+
+- **Monorepo** with two primary services:
+  - `backend/` — FastAPI service that aggregates LiteLLM usage analytics into frontend-friendly JSON.
+  - `frontend/` — Vue 3 SPA that visualizes the aggregated data (leaderboard + charts).
 
 ## Backend
-- Language/runtime: **Python >= 3.13**
-- Web framework: **FastAPI**
-- Server: **Uvicorn**
-- HTTP client: **requests**
-- Data modeling/validation: **Pydantic v2**
-- Dependency management: **uv** (using `pyproject.toml`)
-- Tooling:
-  - Lint/format: **ruff**
-  - Type check: **ty**
-  - Tests: **pytest** (and **httpx** for test HTTP)
+
+- **Language/runtime:** Python **3.13+**
+- **Web framework:** FastAPI
+- **ASGI server:** Uvicorn
+- **HTTP client:** requests
+- **Configuration/env:** python-dotenv
+- **Data modeling/validation:** Pydantic (v2)
+
+### Backend tooling
+
+- **Dependency management / execution:** uv
+- **Testing:** pytest (+ httpx for HTTP testing/mocking)
+- **Lint/format:** ruff
+- **Type checking:** ty
 
 ## Frontend
-- Language: **JavaScript**
-- Framework: **Vue 3**
-- Build/dev: **Vite**
-- Tests: **Vitest** + **Vue Test Utils**
-- Charts: `vue-chartjs` (mocked in unit tests per repo guidance)
 
-## External dependency
+- **Framework:** Vue 3
+- **Build tool / dev server:** Vite
+- **Routing:** Vue Router
+- **Charts:** Chart.js + vue-chartjs
+
+### Frontend tooling
+
+- **Unit tests:** Vitest (+ jsdom, Vue Test Utils)
+- **Linting:** ESLint (eslint-plugin-vue)
+
+## External integration
+
 - **LiteLLM Gateway**
-  - Configured via `LITELLM_BASE_URL` + `LITELLM_API_KEY`
-  - Backend encapsulates LiteLLM-specific API and schemas in `backend/src/client/`
+  - The backend fetches usage/metrics from a LiteLLM Gateway API (base URL + API key supplied via environment variables).

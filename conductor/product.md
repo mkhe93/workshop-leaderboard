@@ -1,32 +1,38 @@
+# Initial Concept
+
+This repository is a workshop “leaderboard” UI that visualizes LLM usage analytics from a LiteLLM Gateway.
+
 # Product Guide
 
-## Product summary
-A workshop "leaderboard" web app that visualizes LLM usage analytics pulled from a LiteLLM Gateway. It provides a leaderboard and charts over a selected date range so workshop participants can see usage patterns and compare activity.
+## Summary
+
+**Workshop Leaderboard** is a lightweight web app used during an LLM workshop to visualize participants’ usage metrics pulled from a LiteLLM Gateway. It supports friendly competition for attendees and gives facilitators a quick way to monitor aggregate usage and trends.
 
 ## Target users
-- **Primary:** Workshop attendees using the LiteLLM Gateway during the workshop.
-- **Secondary (optional):** Workshop facilitators monitoring aggregate activity.
 
-## Problems it solves
-- Makes LiteLLM Gateway usage data **easy to understand at a glance** (leaderboard + charts).
-- Helps participants and facilitators **verify that usage is being tracked correctly**.
-- Enables quick comparisons across users/models over a selected time range.
+- **Workshop attendees** who want to compare their LLM usage against others.
+- **Workshop facilitators** who want visibility into usage across the cohort.
 
-## Key workflows
-1. Start the devcontainer and configure environment (LiteLLM base URL + API key).
-2. Open the UI and select date range / filters.
-3. View:
-   - Leaderboard ranking by usage metrics (e.g., tokens).
-   - Charts for trends and breakdowns.
+## Core views / capabilities
 
-## Key features
-- FastAPI backend that aggregates and transforms LiteLLM analytics into frontend-friendly JSON.
-- Vue 3 + Vite SPA that displays:
-  - Leaderboard view
-  - Charts view
-- Shared date-range filtering.
+- **Token usage leaderboard**
+  - Rank usage by user/team over a selected time range.
+- **Charts over time**
+  - Visualize trends (e.g., tokens over time) across the selected filters.
+- **Model breakdown**
+  - Summarize and compare usage by model.
 
-## Success metrics
-- **Accuracy:** Leaderboard and charts reliably match LiteLLM Gateway usage analytics for the chosen date range.
-- Backend responses are consistent and stable (schemas don’t unexpectedly change).
-- Workshop participants can load the UI without manual debugging or ad-hoc data fixes.
+## Key constraints
+
+- **Secrets management:** no API keys/tokens committed; all sensitive values are provided via environment variables.
+- **Clarity first:** prioritize a fast, readable UI and straightforward interactions over advanced customization.
+
+## Definition of done (initial experience)
+
+- The app loads in the workshop environment and shows the default leaderboard and charts without errors.
+- Filters (e.g., date range, team/user/model) work and are reflected consistently across views.
+- The UI communicates clear error states when the LiteLLM gateway is unavailable or misconfigured.
+
+## Positioning
+
+- The product is positioned primarily as a **Workshop Leaderboard** (lightweight, competitive framing).
