@@ -36,11 +36,10 @@
   "onCreateCommand": {
     "backend_install": "cd backend && uv sync",
     "frontend_install": "cd frontend && npm ci",
-    "add_marketplace": "claude plugin marketplace add lackeyjb/claude-conductor"
+    "add_marketplace": "claude plugin marketplace add fcoury/conductor"
   },
   // executed after onCreateCommand has finished
   "postCreateCommand": {
-    "install_conductor": "claude plugin install --scope local conductor",
-    "restart_ccr": "ccr restart"
+    "install_conductor": "claude plugin install --scope local conductor"
   }
 }
