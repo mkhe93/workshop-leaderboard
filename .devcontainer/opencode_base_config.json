@@ -12,8 +12,8 @@
 				"apiKey": "{env:LITELLM_API_KEY}"
 			},
 			"models": {
-				"{env:BACKGROUND_MODEL_GATEWAY}": {"name": "gpt-5.1"},
-				"{env:DEFAULT_MODEL_GATEWAY}": {"name": "gpt-5.2"}
+				"{env:BACKGROUND_MODEL}": {"name": "gpt-5.1"},
+				"{env:DEFAULT_MODEL}": {"name": "gpt-5.2"}
 			}
 		}
 	}

@@ -1,9 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "DevBoost/{env:DEFAULT_MODEL_GATEWAY}",
-  "plugin": [
-    "opencode-conductor-plugin"
-  ],
+  "model": "DevBoost/{env:DEFAULT_MODEL}",
   "permission": {
     "read": {
       "/workspaces/workshop-infrastructure/files/tasks/masterclass/coding-project/leaderboard/.opencode/get-shit-done/*": "allow"
