@@ -26,8 +26,6 @@ RUN curl -LsSf https://astral.sh/uv/0.10.4/install.sh | sh
 RUN uv python install 3.13
 
 RUN curl -fsSL https://claude.ai/install.sh | bash -s 2.1.47
-RUN claude plugin marketplace add lackeyjb/claude-conductor
-RUN claude plugin install --scope local conductor
 
 RUN echo 'eval "$(ccr activate)"' >> ~/.bashrc
 RUN echo 'alias ll="ls -lh"' >> ~/.bashrc
@@ -35,4 +33,3 @@ RUN echo 'alias la="ls -alh"' >> ~/.bashrc
 RUN echo 'alias lisa="ls -lisah"' >> ~/.bashrc
 
 RUN mkdir -p ~/.claude-code-router
-
