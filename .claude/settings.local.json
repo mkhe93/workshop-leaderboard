@@ -6,5 +6,8 @@
     "deny": [
       "Read(./README_*)"
     ]
+  },
+  "enabledPlugins": {
+    "conductor@conductor": true
   }
 }
