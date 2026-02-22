@@ -17,15 +17,9 @@
     "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/masterclass/.claude-code-router/config.json,type=bind,consistency=cached"
   ],
   "customizations": {
-    "jetbrains": {
-        "plugins": [
-          "ai.opencode.ide.jetbrains@1.0.9"
-        ]
-    },
     "vscode": {
       "settings": {},
       "extensions": [
-        "sst-dev.opencode@0.0.13",
         "mutantdino.resourcemonitor@1.0.7"
       ]
     }
