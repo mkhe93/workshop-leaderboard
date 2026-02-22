@@ -4,19 +4,31 @@ Backend is a **FastAPI** service that aggregates LiteLLM gateway usage analytics
 
 ## Architecture map
 
-- Entry point / app factory: `backend/src/api/server.py` (`create_backend()`)
-- Response/request models: `backend/src/api/models.py`
-- External API client: `backend/src/client/api_client.py` (`LiteLLMAPI`)
-- External API models: `backend/src/client/models.py` (Pydantic)
-- Domain services:
-  - `backend/src/services/token_aggregation_service.py`
-  - `backend/src/services/time_series_service.py`
-  - `backend/src/services/success_rate_service.py`
-  - `backend/src/services/cost_efficiency_service.py`
-  - `backend/src/services/team_service.py`
-- Dependency injection wiring: `backend/src/utils/dependency_config.py`
-- Shared endpoint wrapper: `backend/src/utils/endpoint_utils.py` (`execute_date_range_endpoint`)
-- Date parsing/formatting: `backend/src/utils/date_utils.py`
+```
+backend/
+├── app.py                    # Entry point (Uvicorn server)
+├── pyproject.toml            # Dependencies and tooling config
+├── src/
+│   ├── api/
+│   │   ├── server.py         # FastAPI app factory, routes
+│   │   └── models.py         # Request/response models
+│   ├── client/
+│   │   ├── api_client.py     # LiteLLM API client
+│   │   └── models.py         # External API models
+│   ├── services/             # Domain logic
+│   │   ├── protocols.py      # Service interfaces
+│   │   ├── token_aggregation_service.py
+│   │   ├── time_series_service.py
+│   │   ├── success_rate_service.py
+│   │   ├── cost_efficiency_service.py
+│   │   └── team_service.py
+│   └── utils/
+│       ├── dependency_config.py    # DI wiring
+│       ├── endpoint_utils.py       # Shared endpoint wrapper
+│       ├── date_utils.py           # Date parsing/formatting
+│       └── common.py               # Shared utilities
+└── tests/                    # pytest tests
+```
 
 ## Commands
 

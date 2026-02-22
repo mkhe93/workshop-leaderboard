@@ -4,23 +4,33 @@ Frontend is a **Vue 3** SPA built with **Vite**. It displays a leaderboard and c
 
 ## Architecture map
 
-- Entry: `frontend/src/main.js`
-- App shell: `frontend/src/App.vue`
-- Routes: `frontend/src/router/index.js`
-- Views:
-  - `frontend/src/views/LeaderboardView.vue`
-  - `frontend/src/views/ChartsView.vue`
-- Shared controls (filters): `frontend/src/components/SharedControls.vue`
-- Feature components:
-  - Leaderboard: `frontend/src/components/features/leaderboard/*`
-  - Charts: `frontend/src/components/features/charts/*`
-  - Filters: `frontend/src/components/features/filters/*`
-- Data + state:
-  - `frontend/src/composables/useFilters.js` (URL + localStorage synced)
-  - `frontend/src/composables/useTokenData.js`
-  - `frontend/src/composables/useModelData.js`
-  - plus success-rate / cost-efficiency composables
-- HTTP helpers: `frontend/src/helpers/helpers.js`
+```
+frontend/
+├── index.html
+├── package.json
+├── vite.config.js
+├── src/
+│   ├── main.js               # Entry point
+│   ├── App.vue               # App shell
+│   ├── router/
+│   │   └── index.js          # Route definitions
+│   ├── views/                # Route-level components
+│   │   ├── LeaderboardView.vue
+│   │   └── ChartsView.vue
+│   ├── components/
+│   │   ├── SharedControls.vue
+│   │   └── features/         # Feature-specific components
+│   │       ├── leaderboard/
+│   │       ├── charts/
+│   │       └── filters/
+│   ├── composables/          # Shared state + data fetching
+│   │   ├── useFilters.js     # URL + localStorage synced filters
+│   │   ├── useTokenData.js
+│   │   └── useModelData.js
+│   └── helpers/
+│       └── helpers.js        # HTTP helpers, utilities
+└── (tests co-located as *.test.js)
+```
 
 ## Commands
 
@@ -39,6 +49,7 @@ npm test
 npm run lint
 
 # build
+npm run build
 ```
 
 ## Environment variables

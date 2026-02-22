@@ -2,6 +2,17 @@
 
 This repository is a small monorepo containing a **FastAPI backend** (`backend/`) and a **Vue 3 frontend** (`frontend/`) for a workshop “leaderboard” UI that visualizes LLM usage analytics from a **LiteLLM Gateway**.
 
+## Repository Layout
+
+```
+/
+├── backend/          # Python FastAPI service
+├── frontend/         # Vue 3 SPA
+├── conductor/        # Product documentation
+├── .devcontainer/    # Dev container config
+└── devbox.json       # Devbox environment config
+```
+
 ## Where to look next
 
 For detailed, scoped instructions (commands, testing, implementation boundaries), prefer:
