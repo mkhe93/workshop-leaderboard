@@ -24,7 +24,7 @@ npm run dev
 
 now you can visit the frontend via [https://workshop.devboost.com](https://workshop.devboost.com) -> `Frontend`
 
-<img src="./assets/leaderboard_page.png" alt="Leaderboard" width="400"/>
+<img src="./assets/leaderboard_page.png" alt="Leaderboard" width="700"/>
 
 --- 
 
@@ -36,7 +36,7 @@ Therefore, a draft frontend implementation already exists with the backend retur
 
 The full backend implementation is still missing and should return all models with the aggregated tokens among all users.
 
-<img src="./assets/task_model_usage.png" alt="Starting Page" width="700"/>
+<img src="./assets/task_model_usage.png" alt="Starting Page" width="800"/>
 
 ---
 
