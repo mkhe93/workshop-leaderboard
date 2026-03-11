@@ -1,6 +1,6 @@
 {
   "name": "Devbox Remote Container",
-  "image": "ghcr.io/mkhe93/workshop-leaderboard:latest",
+  "build": { "dockerfile": "Dockerfile" },
   "runArgs": ["--env-file",".devcontainer/devcontainer.env"],
   "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=cached",
   "workspaceFolder": "/code",
