@@ -2,8 +2,12 @@
   "name": "Devbox Remote Container",
   "image": "ghcr.io/mkhe93/workshop-leaderboard:latest",
   "runArgs": ["--env-file",".devcontainer/devcontainer.env"],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=cached",
+  "workspaceFolder": "/code",
+  "remoteUser": "node",
+  "containerUser": "node",
   "mounts": [
-    "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/masterclass/.claude-code-router/config.json,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder}/.devcontainer/ccr_config.json,target=/home/node/.claude-code-router/config.json,type=bind,consistency=cached"
   ],
   "customizations": {
     "vscode": {
@@ -21,6 +25,7 @@
     9080
   ],
   "onCreateCommand": {
+	"diagnostics": "whoami && id && pwd && ls -lah",
     "backend_install": "cd backend && uv sync",
     "frontend_install": "cd frontend && npm ci",
     "add_marketplace": "claude plugin marketplace add fcoury/conductor"
