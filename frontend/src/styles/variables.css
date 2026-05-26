@@ -1,0 +1,63 @@
+:root {
+  /* Colors */
+  --color-primary: #FF9020;
+  --color-primary-hover: #e67e1a;
+  --color-primary-light: rgba(255, 144, 32, 0.1);
+  
+  --color-background: #242838;
+  --color-surface: #23253a;
+  --color-surface-elevated: rgba(35, 37, 58, 0.6);
+  
+  --color-text-primary: #f3f3f3;
+  --color-text-secondary: #b0b3c6;
+  --color-text-muted: #666;
+  
+  --color-error: #ff7a7a;
+  --color-error-dark: #d32f2f;
+  
+  --color-border: rgba(176, 179, 198, 0.2);
+  --color-border-focus: #ff9020;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 4px 0 rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 4px 32px 0 rgba(0, 0, 0, 0.35);
+  --shadow-primary: 0 1px 6px rgba(255, 144, 32, 0.25);
+  
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.3rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2.2rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+}

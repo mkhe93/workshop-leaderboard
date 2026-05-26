@@ -1,0 +1,551 @@
+{
+  'metadata': {
+    'total_spend': 57.18449796999999,
+    'total_prompt_tokens': 23868192,
+    'total_completion_tokens': 809730,
+    'total_tokens': 24677922,
+    'total_api_requests': 1341,
+    'total_successful_requests': 1099,
+    'total_failed_requests': 242,
+    'total_cache_read_input_tokens': 4512865,
+    'total_cache_creation_input_tokens': 732246,
+    'page': 1,
+    'total_pages': 1,
+    'has_more': "False"
+  },
+  'results': [
+    {
+      'date': '2026-02-14',
+      'metrics': {
+        'spend': 0.34471605000000005,
+        'prompt_tokens': 61112,
+        'completion_tokens': 10485,
+        'cache_read_input_tokens': 0,
+        'cache_creation_input_tokens': 0,
+        'total_tokens': 71597,
+        'successful_requests': 20,
+        'failed_requests': 0,
+        'api_requests': 20
+      },
+      'breakdown': {
+        'mcp_servers': {},
+        'models': {
+          'bedrock/converse/eu.anthropic.claude-opus-4-5-20251101-v1:0': {
+            'metrics': {
+              'spend': 0.22019,
+              'prompt_tokens': 36833,
+              'completion_tokens': 1441,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 38274,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '244ced380cc1cc7dbd24a0ce2c7e391183aff5a533dd79e2ee3d3a860efdbbe6': {
+                'metrics': {
+                  'spend': 0.22019,
+                  'prompt_tokens': 36833,
+                  'completion_tokens': 1441,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 38274,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-1',
+                  'team_id': 'c4cb8d42-5e02-4304-bbd9-132252bd1c25'
+                }
+              }
+            }
+          },
+          'openai/gpt-5.2': {
+            'metrics': {
+              'spend': 0.03828055,
+              'prompt_tokens': 5473,
+              'completion_tokens': 2223,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 7696,
+              'successful_requests': 6,
+              'failed_requests': 0,
+              'api_requests': 6
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '1b0b0696b49455d8156fb95f52952f6090147f15d74a48ad9016d007868699e8': {
+                'metrics': {
+                  'spend': 0.03828055,
+                  'prompt_tokens': 5473,
+                  'completion_tokens': 2223,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 7696,
+                  'successful_requests': 6,
+                  'failed_requests': 0,
+                  'api_requests': 6
+                },
+                'metadata': {
+                  'key_alias': 'user-2',
+                  'team_id': '293e81c7-a553-4fa5-8c42-8807835ce63c'
+                }
+              }
+            }
+          },
+          'openai/gpt-5.1-chat-latest': {
+            'metrics': {
+              'spend': 0.0862455,
+              'prompt_tokens': 18806,
+              'completion_tokens': 6821,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 25627,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              'e5e0ec8083b2532df27934511acb4f29bb097a757cb2bebc3a26e6c479e2d180': {
+                'metrics': {
+                  'spend': 0.0862455,
+                  'prompt_tokens': 18806,
+                  'completion_tokens': 6821,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 25627,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-3',
+                  'team_id': '78c0ead9-0ce0-4837-bf51-3e4340be12d1'
+                }
+              }
+            }
+          }
+        },
+        'model_groups': {
+          'DevBoost/Anthropic/claude-opus-4.5': {
+            'metrics': {
+              'spend': 0.22019,
+              'prompt_tokens': 36833,
+              'completion_tokens': 1441,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 38274,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '244ced380cc1cc7dbd24a0ce2c7e391183aff5a533dd79e2ee3d3a860efdbbe6': {
+                'metrics': {
+                  'spend': 0.22019,
+                  'prompt_tokens': 36833,
+                  'completion_tokens': 1441,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 38274,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-1',
+                  'team_id': 'c4cb8d42-5e02-4304-bbd9-132252bd1c25'
+                }
+              }
+            }
+          },
+          'DevBoost/OpenAI/gpt-5.2': {
+            'metrics': {
+              'spend': 0.03828055,
+              'prompt_tokens': 5473,
+              'completion_tokens': 2223,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 7696,
+              'successful_requests': 6,
+              'failed_requests': 0,
+              'api_requests': 6
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '1b0b0696b49455d8156fb95f52952f6090147f15d74a48ad9016d007868699e8': {
+                'metrics': {
+                  'spend': 0.03828055,
+                  'prompt_tokens': 5473,
+                  'completion_tokens': 2223,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 7696,
+                  'successful_requests': 6,
+                  'failed_requests': 0,
+                  'api_requests': 6
+                },
+                'metadata': {
+                  'key_alias': 'user-2',
+                  'team_id': '293e81c7-a553-4fa5-8c42-8807835ce63c'
+                }
+              }
+            }
+          },
+          'DevBoost/OpenAI/gpt-5.1-chat-latest': {
+            'metrics': {
+              'spend': 0.0862455,
+              'prompt_tokens': 18806,
+              'completion_tokens': 6821,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 25627,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              'e5e0ec8083b2532df27934511acb4f29bb097a757cb2bebc3a26e6c479e2d180': {
+                'metrics': {
+                  'spend': 0.0862455,
+                  'prompt_tokens': 18806,
+                  'completion_tokens': 6821,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 25627,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-3',
+                  'team_id': '78c0ead9-0ce0-4837-bf51-3e4340be12d1'
+                }
+              }
+            }
+          }
+        },
+        'providers': {
+          'bedrock': {
+            'metrics': {
+              'spend': 0.22019,
+              'prompt_tokens': 36833,
+              'completion_tokens': 1441,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 38274,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '244ced380cc1cc7dbd24a0ce2c7e391183aff5a533dd79e2ee3d3a860efdbbe6': {
+                'metrics': {
+                  'spend': 0.22019,
+                  'prompt_tokens': 36833,
+                  'completion_tokens': 1441,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 38274,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-1',
+                  'team_id': 'c4cb8d42-5e02-4304-bbd9-132252bd1c25'
+                }
+              }
+            }
+          },
+          'openai': {
+            'metrics': {
+              'spend': 0.12452605,
+              'prompt_tokens': 24279,
+              'completion_tokens': 9044,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 33323,
+              'successful_requests': 13,
+              'failed_requests': 0,
+              'api_requests': 13
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '1b0b0696b49455d8156fb95f52952f6090147f15d74a48ad9016d007868699e8': {
+                'metrics': {
+                  'spend': 0.03828055,
+                  'prompt_tokens': 5473,
+                  'completion_tokens': 2223,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 7696,
+                  'successful_requests': 6,
+                  'failed_requests': 0,
+                  'api_requests': 6
+                },
+                'metadata': {
+                  'key_alias': 'user-2',
+                  'team_id': '293e81c7-a553-4fa5-8c42-8807835ce63c'
+                }
+              },
+              'e5e0ec8083b2532df27934511acb4f29bb097a757cb2bebc3a26e6c479e2d180': {
+                'metrics': {
+                  'spend': 0.0862455,
+                  'prompt_tokens': 18806,
+                  'completion_tokens': 6821,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 25627,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-3',
+                  'team_id': '78c0ead9-0ce0-4837-bf51-3e4340be12d1'
+                }
+              }
+            }
+          }
+        },
+        'endpoints': {
+          '/chat/completions': {
+            'metrics': {
+              'spend': 0.34471605000000005,
+              'prompt_tokens': 61112,
+              'completion_tokens': 10485,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 71597,
+              'successful_requests': 20,
+              'failed_requests': 0,
+              'api_requests': 20
+            },
+            'metadata': {},
+            'api_key_breakdown': {
+              '244ced380cc1cc7dbd24a0ce2c7e391183aff5a533dd79e2ee3d3a860efdbbe6': {
+                'metrics': {
+                  'spend': 0.22019,
+                  'prompt_tokens': 36833,
+                  'completion_tokens': 1441,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 38274,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-1',
+                  'team_id': 'c4cb8d42-5e02-4304-bbd9-132252bd1c25'
+                }
+              },
+              '1b0b0696b49455d8156fb95f52952f6090147f15d74a48ad9016d007868699e8': {
+                'metrics': {
+                  'spend': 0.03828055,
+                  'prompt_tokens': 5473,
+                  'completion_tokens': 2223,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 7696,
+                  'successful_requests': 6,
+                  'failed_requests': 0,
+                  'api_requests': 6
+                },
+                'metadata': {
+                  'key_alias': 'user-2',
+                  'team_id': '293e81c7-a553-4fa5-8c42-8807835ce63c'
+                }
+              },
+              'e5e0ec8083b2532df27934511acb4f29bb097a757cb2bebc3a26e6c479e2d180': {
+                'metrics': {
+                  'spend': 0.0862455,
+                  'prompt_tokens': 18806,
+                  'completion_tokens': 6821,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 25627,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-3',
+                  'team_id': '78c0ead9-0ce0-4837-bf51-3e4340be12d1'
+                }
+              }
+            }
+          }
+        },
+        'api_keys': {
+          '244ced380cc1cc7dbd24a0ce2c7e391183aff5a533dd79e2ee3d3a860efdbbe6': {
+            'metrics': {
+              'spend': 0.22019,
+              'prompt_tokens': 36833,
+              'completion_tokens': 1441,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 38274,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {
+              'key_alias': 'user-1',
+              'team_id': 'c4cb8d42-5e02-4304-bbd9-132252bd1c25'
+            }
+          },
+          '1b0b0696b49455d8156fb95f52952f6090147f15d74a48ad9016d007868699e8': {
+            'metrics': {
+              'spend': 0.03828055,
+              'prompt_tokens': 5473,
+              'completion_tokens': 2223,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 7696,
+              'successful_requests': 6,
+              'failed_requests': 0,
+              'api_requests': 6
+            },
+            'metadata': {
+              'key_alias': 'user-2',
+              'team_id': '293e81c7-a553-4fa5-8c42-8807835ce63c'
+            }
+          },
+          'e5e0ec8083b2532df27934511acb4f29bb097a757cb2bebc3a26e6c479e2d180': {
+            'metrics': {
+              'spend': 0.0862455,
+              'prompt_tokens': 18806,
+              'completion_tokens': 6821,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 25627,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {
+              'key_alias': 'user-3',
+              'team_id': '78c0ead9-0ce0-4837-bf51-3e4340be12d1'
+            }
+          }
+        },
+        'entities': {
+          'c4cb8d42-5e02-4304-bbd9-132252bd1c25': {
+            'metrics': {
+              'spend': 0.22019,
+              'prompt_tokens': 36833,
+              'completion_tokens': 1441,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 38274,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {
+              'team_alias': 'Company A'
+            },
+            'api_key_breakdown': {
+              '244ced380cc1cc7dbd24a0ce2c7e391183aff5a533dd79e2ee3d3a860efdbbe6': {
+                'metrics': {
+                  'spend': 0.22019,
+                  'prompt_tokens': 36833,
+                  'completion_tokens': 1441,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 38274,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-1',
+                  'team_id': 'c4cb8d42-5e02-4304-bbd9-132252bd1c25'
+                }
+              }
+            }
+          },
+          '293e81c7-a553-4fa5-8c42-8807835ce63c': {
+            'metrics': {
+              'spend': 0.03828055,
+              'prompt_tokens': 5473,
+              'completion_tokens': 2223,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 7696,
+              'successful_requests': 6,
+              'failed_requests': 0,
+              'api_requests': 6
+            },
+            'metadata': {
+              'team_alias': 'Company B'
+            },
+            'api_key_breakdown': {
+              '1b0b0696b49455d8156fb95f52952f6090147f15d74a48ad9016d007868699e8': {
+                'metrics': {
+                  'spend': 0.03828055,
+                  'prompt_tokens': 5473,
+                  'completion_tokens': 2223,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 7696,
+                  'successful_requests': 6,
+                  'failed_requests': 0,
+                  'api_requests': 6
+                },
+                'metadata': {
+                  'key_alias': 'user-2',
+                  'team_id': '293e81c7-a553-4fa5-8c42-8807835ce63c'
+                }
+              }
+            }
+          },
+          '78c0ead9-0ce0-4837-bf51-3e4340be12d1': {
+            'metrics': {
+              'spend': 0.0862455,
+              'prompt_tokens': 18806,
+              'completion_tokens': 6821,
+              'cache_read_input_tokens': 0,
+              'cache_creation_input_tokens': 0,
+              'total_tokens': 25627,
+              'successful_requests': 7,
+              'failed_requests': 0,
+              'api_requests': 7
+            },
+            'metadata': {
+              'team_alias': 'Company C'
+            },
+            'api_key_breakdown': {
+              'e5e0ec8083b2532df27934511acb4f29bb097a757cb2bebc3a26e6c479e2d180': {
+                'metrics': {
+                  'spend': 0.0862455,
+                  'prompt_tokens': 18806,
+                  'completion_tokens': 6821,
+                  'cache_read_input_tokens': 0,
+                  'cache_creation_input_tokens': 0,
+                  'total_tokens': 25627,
+                  'successful_requests': 7,
+                  'failed_requests': 0,
+                  'api_requests': 7
+                },
+                'metadata': {
+                  'key_alias': 'user-3',
+                  'team_id': '78c0ead9-0ce0-4837-bf51-3e4340be12d1'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

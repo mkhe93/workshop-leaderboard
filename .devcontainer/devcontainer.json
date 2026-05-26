@@ -1,0 +1,42 @@
+{
+  "name": "Devbox Remote Container",
+  "image": "ghcr.io/mkhe93/workshop-leaderboard:latest",
+  // "build": { "dockerfile": "Dockerfile" }, // alternatively build image locally
+  "runArgs": ["--env-file",".devcontainer/devcontainer.env"],
+  "containerEnv": {
+    "LITELLM_BASE_URL": "https://gateway.mkhe.de",
+    "ANTHROPIC_BASE_URL": "https://gateway.mkhe.de",
+    "ANTHROPIC_MODEL": "gpt-5-mini",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "gpt-5-mini",
+    "ANTHROPIC_SMALL_FAST_MODEL": "gpt-5-mini",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5-mini",
+    "VITE_BACKEND_URL": "http://localhost:8000",
+    "VITE_LEADERBOARD_FRONTEND_PORT": "5173"
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/code,type=bind,consistency=cached",
+  "workspaceFolder": "/code",
+  "remoteUser": "node",
+  "containerUser": "node",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "mutantdino.resourcemonitor@1.0.7",
+        "Vue.volar@3.3.2",
+        "Anthropic.claude-code@2.1.142"
+      ]
+    }
+  },
+  "hostRequirements": {
+    "cpus": 3,
+    "memory": "6gb"
+  },
+  "forwardPorts": [
+    9080
+  ],
+  "onCreateCommand": {
+    "diagnostics": "whoami && id && pwd && ls -lah",
+    "backend_install": "cd backend && uv sync",
+    "frontend_install": "cd frontend && npm ci"
+  }
+}
