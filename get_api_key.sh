@@ -126,7 +126,7 @@ fi
 key_payload="$(jq -nc \
   --arg key_alias "$KEY_ALIAS" \
   --arg user_id "default_user_id" \
-  --arg duration "10h" \
+  --arg duration "7d" \
   --arg team_id "$created_team_id" \
   --argjson models '["all-team-models"]' \
   '{key_alias: $key_alias, user_id: $user_id, duration: $duration, models: $models, team_id: $team_id}')"
